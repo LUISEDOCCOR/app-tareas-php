@@ -49,24 +49,24 @@ https://www.npmjs.com/package/notyf
 ## Diseño
 #### Página Autenticación 
 Cada usuario tiene un nombre, un correo, que tiene ser único, y una contraseña, que no se guarda de forma directa en la tabla, si no que se encripta . *EL correo es el identificador de cada usuario*
-![[./assets/mockup_auth.png]]
+![[/assets/mockup_auth.png]]
 #### Página inicio 
  Aquí se pueden crear la tareas, ver todas las tareas y hacer el uso de los filtros. En el navbar para la imagen de perfil se usa la api de ui avatars (https://ui-avatars.com/) 
-![[./assets/mockup_home.png]]
+![[/assets/mockup_home.png]]
 Todas la paginas al realizar la acción correspondiente regresan la pagina de inicio
 #### Página editar tarea
 Al cargar la view, primero se toman los datos de la tarea. 
 Como el id de la tarea es puesto en ruta (es posible poner otro id), para estar seguros que se va a mostrar una tarea del usuario autenticado el query a base de datos es el siguiente `SELECT * FROM tareas WHERE id = ? AND user_id = ?` En el caso de que no se encuentre la tarea regresamos al inicio 
-![[./assets/mockup_edit.png]]
+![[/assets/mockup_edit.png]]
 #### Página estadísticas 
 Se mostraran las siguientes estadísticas
 - Tareas creadas (ultimo mes)
 - Tareas terminadas (ultimo mes)
 - Duración promedio de cada tarea  (incio - **terminación** )
-![[./assets/mockup_statistics.png]]
+![[/assets/mockup_statistics.png]]
 #### Página categorías
 Se crean las categorías y hay una tabla, con las categorías donde se pueden ver, editar y borrar  
-![[./assets/mockup_categoires.png]]
+![[/assets/mockup_categoires.png]]
 
 ## Rutas
 
