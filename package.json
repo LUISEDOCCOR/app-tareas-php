@@ -1,0 +1,25 @@
+{
+  "name": "tareas",
+  "version": "1.0.0",
+  "description": "Es una aplicación sencilla para organizar tareas diarias, organizadas mediante categorías, con autenticación",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "pnpx @tailwindcss/cli -i app.css -o ./public/css/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LUISEDOCCOR/app-tareas-php.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LUISEDOCCOR/app-tareas-php/issues"
+  },
+  "homepage": "https://github.com/LUISEDOCCOR/app-tareas-php#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "daisyui": "^5.0.46",
+    "tailwindcss": "^4.1.11"
+  }
+}
