@@ -12,7 +12,7 @@ class BaseModel {
         return $conn;
     }
 
-    protected function obtenerTodos () {
+    public function obtenerTodos () {
         $conn = self::conectarDB();
         $stmt = $conn->prepare("SELECT * FROM ". $this->tabla);
         $stmt->execute();
@@ -20,7 +20,7 @@ class BaseModel {
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    protected function obtenerById ($id) {
+    public function obtenerById ($id) {
         $conn = self::conectarDB();
         $stmt = $conn->prepare("SELECT * FROM ".$this->tabla." WHERE id = ?");
         $stmt->bind_param("i", $id);
@@ -29,7 +29,7 @@ class BaseModel {
         return $result->fetch_assoc();
     }
 
-    protected function borrar ($id) { 
+    public function borrar ($id) { 
         $conn = self::conectarDB();
         $stmt = $conn->prepare("DELETE FROM ".$this->tabla." WHERE id = ?");
         $stmt->bind_param("i", $id);
@@ -37,7 +37,7 @@ class BaseModel {
         return $stmt->affected_rows;
     }
 
-    protected function crear ($valores) { 
+    public function crear ($valores) { 
         $conn = self::conectarDB();
         
         $camposFormateados = "";
@@ -54,7 +54,7 @@ class BaseModel {
         return $stmt->affected_rows;
     }
 
-     public function update($id, $datos)
+    public function update($id, $datos)
     {
         $conn = self::conectarDB();
 
