@@ -1,3 +1,4 @@
 @import "tailwindcss" source(none);
 @source "./app/Views/**/*.html";
+@source "./public/index.php";
 @plugin "daisyui";
