@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="/css/output.css">
 	<title>App Tareas</title>
 </head>
-<body>
+<body class="px-4 xl:px-0">
     <?php $_SESSION["content"]; ?>
 </body>
 </html>
