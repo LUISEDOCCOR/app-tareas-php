@@ -2,6 +2,7 @@
 namespace App\Core;
 
 use App\Controllers\HomeController;
+use App\Controllers\AuthController;
 
 class App
 {
@@ -13,6 +14,13 @@ class App
 
         //Home
         $this->router->get("/", HomeController::class, "index", "home.index");
+        //Auth
+        $this->router->get(
+            "/auth",
+            AuthController::class,
+            "auth",
+            "auth.index",
+        );
     }
 
     public function run()

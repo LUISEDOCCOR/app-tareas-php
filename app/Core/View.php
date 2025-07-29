@@ -3,10 +3,20 @@ namespace App\Core;
 
 class View
 {
-    public static function render($view, $layout = "main_layout.php")
-    {
-        unset($_SESSION["content"]);
-        $_SESSION["content"] = require_once VIEWS_DIRECTORY . "/$view";
+    public static function render(
+        $view,
+        $layout = "main_layout.php",
+        $vars = [],
+    ) {
+        extract($vars);
+
+        //contenido de mi view
+        ob_start();
+        require_once VIEWS_DIRECTORY . "/$view";
+        $content = ob_get_clean();
+
+        require_once VIEWS_DIRECTORY . "/header.php";
         require_once VIEWS_DIRECTORY . "/layouts/$layout";
+        require_once VIEWS_DIRECTORY . "/footer.php";
     }
 }

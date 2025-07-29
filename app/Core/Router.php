@@ -27,7 +27,7 @@ class Router
             $controller->{$data["method"]}();
         } else {
             http_response_code(404);
-            View::render("errors/404.php");
+            View::render("errors/404.php", "errors_layout.php");
         }
     }
 

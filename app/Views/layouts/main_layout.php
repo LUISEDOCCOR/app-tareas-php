@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/css/output.css">
-	<title>App Tareas</title>
-</head>
-<body class="px-4 xl:px-0">
-    <?php $_SESSION["content"]; ?>
+<body class="mx-auto max-w-5xl py-12 px-4 xl:px-0">
+    <?= $content ?>
 </body>
-</html>
